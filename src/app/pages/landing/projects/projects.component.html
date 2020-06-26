@@ -1,0 +1,73 @@
+<div class="row g-0">
+  <div class="col-12 bg-gray">
+    <app-title-header
+      [title]="Title.title"
+      [subtitle]="Title.subtitle"
+      [divider]="Title.divider"
+      [padding]="7"
+    ></app-title-header>
+  </div>
+  <div class="col-12" *ngFor="let project of Projects; index as i">
+    <div
+      class="row g-0 container-project"
+      [ngClass]="'bg-section-' + project.id"
+    >
+      <div
+        class="col d-none d-sm-block mt-4"
+        [ngClass]="i % 2 == 0 ? 'order-0' : 'order-1'"
+      >
+        <figure class="mb-0 h-100 d-flex">
+          <img
+            [src]="project.mainImageURL"
+            alt="mainImageURL"
+            class="img-fluid figure-img mb-0 mt-auto"
+          />
+        </figure>
+      </div>
+      <div
+        class="col container-info d-flex justify-content-center align-items-center"
+        [ngClass]="i % 2 == 0 ? 'order-1' : 'order-0'"
+      >
+        <div
+          class="p-3 text-left"
+          [ngClass]="project.contrast ? 'contrast' : null"
+        >
+          <figure class="divider">
+            <img
+              [src]="project.logoImageURL"
+              alt="logoImageURL"
+              class="img-fluid figure-img logo"
+            />
+          </figure>
+          <h1 class="title font-weight-bold mt-3">{{ project.title }}</h1>
+          <p class="description mt-3 w-75">
+            {{ project.description }}
+          </p>
+          <div>
+            <i class="fas fa-tag"></i>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              *ngFor="let tag of project.tags"
+            >
+              <span class="tag mx-1">{{ tag }}</span>
+            </a>
+          </div>
+          <button
+            class="btn btn-light text-uppercase font-weight-bold mt-3 p-2"
+          >
+            ver detalles
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  <div
+    class="col bg-section-1"
+    *ngFor="let info of information; index as i"
+    [ngClass]="'bg-section-' + (i + 1)"
+  >
+   
+  </div> -->
+</div>

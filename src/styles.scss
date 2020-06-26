@@ -1,1 +1,53 @@
+@import "src/theme.scss";
 /* You can add global styles to this file, and also import other style files */
+.app-view {
+  /*  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden; */
+}
+
+//resert bootstrap
+//-general
+.row {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Graphik" !important;
+}
+//-text and colors
+.text-primary {
+  color: $primary-color !important;
+}
+.btn-primary {
+  border-color: $primary-color;
+  background-color: $primary-color;
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+    background-color: white;
+  }
+}
+.btn-outline-primary {
+  color: $primary-color;
+  border-color: $primary-color;
+  &:hover {
+    color: white;
+    border-color: $primary-color;
+    background-color: $primary-color;
+  }
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-gray {
+  background-color: #273138;
+}

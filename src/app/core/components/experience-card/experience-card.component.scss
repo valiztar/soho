@@ -1,0 +1,30 @@
+.container-img {
+  width: 100%;
+  height: 50vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 30% 20% 5% 20%;
+  flex-direction: column;
+  .black-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  img {
+    position: relative;
+  }
+  .sentence,
+  .role {
+    flex: 0 0 50%;
+    position: relative;
+    color: white;
+    z-index: 2;
+    width: 100%;
+  }
+}

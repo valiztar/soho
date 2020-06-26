@@ -1,0 +1,22 @@
+<div class="row g-0">
+  <div class="col-12 bg-gray">
+    <app-title-header
+      [title]="Title.title"
+      [subtitle]="Title.subtitle"
+      [divider]="Title.divider"
+      [padding]="7"
+    ></app-title-header>
+  </div>
+  <div class="col-md-4 col-sm-6 col-12" *ngFor="let person of People">
+    <app-experience-card
+      [sentence]="person.sentence"
+      [role]="person.role"
+      [imageurl]="person.imageurl"
+    ></app-experience-card>
+  </div>
+  <div class="col-12 p-5 bg-gray text-center">
+    <button class="btn btn-lg btn-primary text-uppercase font-weight-bold">
+      hablemos de tu proyecto
+    </button>
+  </div>
+</div>

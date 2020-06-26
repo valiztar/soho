@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-12 bg-gray">
+    <app-title-header
+      [title]="Title.title"
+      [subtitle]="Title.subtitle"
+      [divider]="Title.divider"
+      [padding]="7"
+    ></app-title-header>
+  </div>
+  <div
+    class="col-12 col-sm bg-section-1"
+    *ngFor="let info of information; index as i"
+    [ngClass]="'bg-section-' + (i + 1)"
+  >
+    <app-title-header
+      [title]="info.title"
+      [subtitle]="info.subtitle"
+      [divider]="info.divider"
+      [padding]="15"
+    ></app-title-header>
+  </div>
+</div>

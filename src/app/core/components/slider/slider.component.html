@@ -1,0 +1,21 @@
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div
+      class="carousel-item"
+      data-interval="5000"
+      *ngFor="let slide of slides; index as i"
+      [ngClass]="i == 0 ? 'active' : null"
+      [style.background-image]="'url(' + slide.url + ')'"
+    >
+      <div class="carousel-caption d-block">
+        <h1 class="display-2">{{ slide.title }}</h1>
+        <p class="display-3 text-primary font-weight-bold">
+          {{ slide.subtitle }}
+        </p>
+        <button class="btn btn-lg btn-primary text-uppercase font-weight-bold">
+          hablemos de tu proyecto
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
